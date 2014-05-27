@@ -1,0 +1,41 @@
+CSE 521-Operating Systems
+Made by Abhinav Bhardwaj(50096621)
+
+
+************************************************************************************************************************************************
+NOTE:
+
+1)Tested and Verified on Mozilla Firefox and Telnet.
+2)Implemented all functionalities asked in the project such as Socket Programming,Mutlithreading,Queueing,Synchronization.
+3)The time component when "file not found" has some problems.
+4)All the html pages are shown on the browser, and on telnet HTML pages are converted to text.
+5)Works well for Html,Text and Images.
+6)Implemented "~" on the webserver, but it works on Telnet. It gets converted to the users myhttpd Directory "/home/<user>/myhttpd"or the current directory of the user. 
+Type GET ~/OS.html or HEAD ~/OS.html to check.
+
+7)To check on the Telnet whether a file is present or not type "GET \" or GET /"anyfilename" which does not exist, It will print all the files 
+in the directory.
+8)On the Browser type "127.0.0.1:4891/Mausic.txt" or 127.0.0.1:4891/, It will print all the files in the directory.
+9)Logging is done in the Logfile present in the directory.
+
+
+Compilation
+************************************************************************************************************************************************
+Untar the Bhardwaj_Abhinav.tar,It consists of a folder myhttpd which has following files::
+a)Read me
+b)makeFile
+c)Source File(myhttpd.cpp)
+d)All the Html files,text Files and images to check.
+
+1)To print all the usage summary->myhttpd -h
+2)Compile using
+make command
+
+Run the executable file as
+./myhttpd -p 4891 -r "/home/Abhinav/Desktop/OSProject/(Root Dir Path)Can be any"  -l logfile -h  -n 6 -t 10 -d 
+
+After running this command,  Server will be running,listening and will be waiting for acceptions.
+
+3)To GET a HTML page, go on browser and write 127.0.0.1:portno(4891)/OS.html
+  TO GET a FILENOTFOUND go on browser and write 127.0.0.1:portno(4891)/assdd.html or 127.0.0.1:portno(4891)/ or GET \ or or GET /"anyfilename" which does not exist, on TELNET.
+
